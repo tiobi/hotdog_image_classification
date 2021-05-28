@@ -44,11 +44,13 @@ def get_dir():
     return directory
 '''    
 
+#TensorBoard (진행중)
 '''
 TensorBoard Activation:
     import IPython
     IPython.start_ipython
 '''    
+
 #이미지 데이터 생성
 def generate_images():
     from keras.preprocessing.image import ImageDataGenerator
@@ -240,13 +242,13 @@ def show_graphs(history):
     plt.show()
     plt.savefig("1000_images.png", dpi = 1000)
 
-'''
+
 x_train, y_train, x_test, y_test = load_dataset()
 model = get_model(IMG_SIZE)
 model.compile(optimizer = "adam", loss = "binary_crossentropy", metrics = ["accuracy"])
 hist = model.fit(x_train, y_train, batch_size = 25, epochs = 150, validation_data = (x_test, y_test))
 show_graphs(hist)
-'''
+
 
 
 
